@@ -1,0 +1,26 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-07-24T17:14:46.306825",
+    "startedAt": "2022-07-24T17:14:36.685712",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "source/api",
+        "-vv",
+        "-s"
+    ],
+    "state": "running",
+    "program": "D:\\anaconda3\\envs\\colab2deploy\\Scripts\\pytest-script.py",
+    "codePath": "..\\anaconda3\\envs\\colab2deploy\\Scripts\\pytest-script.py",
+    "git": {
+        "remote": "https://github.com/juliofreire/traffic-sign-recognition",
+        "commit": "60048397ed24ec7787d4fd36251de86eb1a073b1"
+    },
+    "email": "julio.juliofreire@gmail.com",
+    "root": "D:/traffic-sign-recognition",
+    "host": "ACERTMAIS-RN-51",
+    "username": "Julio.Freire",
+    "executable": "D:\\anaconda3\\envs\\colab2deploy\\python.exe"
+}
