@@ -12,7 +12,7 @@ import io
 from tensorflow import keras
 import h5py
 import numpy as np
-import cv2
+#import cv2
 from PIL import Image
 import joblib
 import os
