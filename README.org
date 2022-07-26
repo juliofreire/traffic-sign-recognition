@@ -1,4 +1,4 @@
-#+TITLE: Red Wine Quality Classifier
+#+TITLE: LeNet-5 Neural Network Classifier
 #+AUTHOR: João Lucas Correia Barbosa de Farias
 #+AUTHOR: Júlio Freire
 #+EMAIL: joao.farias.080@ufrn.edu.br
