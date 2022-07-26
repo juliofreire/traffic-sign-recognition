@@ -51,6 +51,17 @@ In this [[file:source/pipeline/6-test.ipynb][sixth and final]] step, we tested o
 
 26-07-2022 00:05:09 Test F1: 0.9079
 
+* Deployment
+After all the previous steps, we can now deploy our model so anyone can try it. Due to its robustness and efficiency, FastAPI, a web framework, was used to aid us in this task. Also, we used Uvicorn to connect the framework through the gateway. These two make a strong duo for this kind of task, especially for beginners. With them, we are able to develop a local app and, by using Heroku, we can upload the app to a cloud server.
+
+Github and Heroku make it possible to do CI/CD integration. This way, any modification in local files is synced with Heroku servers.
+
+In order to deploy our app, first we used an organized structure of directories. In the path ‘source/api’ we created a main.py where our home route (“/”) and predict route (“/predict/”) are implemented. In the home route, we use the method GET to show a first screen with a brief description of the project. In the predict route we use a POST method to upload an image as a file. Then, the app responds with a prediction of which traffic sign the image represents.
+
+In order to do all those prediction steps, we create a new file ‘predict.py’ that contains a read image function. Also, we create a neural network architecture, load the weights imported by W&B, send the image to the server, get the prediction and deliver it to the user. So, when an image is uploaded in the page, ‘predict.py’ is called to run the process.
+
+Now, our project is live! Click [[https://traffic-sign-reco.herokuapp.com/][here]] to try it yourself!
+
 * References
 This project was based on our previous project on a  [[https://github.com/juliofreire/wine-quality-ml][Decision Tree classifier model]] used to predict red wine quality by analyzing chemical proprieties of wines. Also, we based ourselves on the LeNet-5 Neural Network implementation as perfomed by [[https://github.com/ivanovitchm/deeplearning][Ivanovitch Silva]].
 
