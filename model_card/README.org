@@ -1,0 +1,51 @@
+#+TITLE: Model Card -- Traffic Sign Recognition
+#+AUTHOR: João Lucas Correia Barbosa de Farias
+#+AUTHOR: Júlio Freire
+#+EMAIL: joao.farias.080@ufrn.edu.br
+
+* Model Details
+- João Lucas Farias and Júlio Freire are the authors of this model.
+- The dataset was taken from Kaggle and it contains images of German traffic signs.
+- A full pipeline was developed using Google Colab and Weights & Biases.
+- A LeNet-5 Neural Network was used to train the model.
+
+* Intended Use
+- This model is intended to serve as an educational tool, to help students understand the basics of Machine Learning algorithm implementation and good practices. By creating a full pipeline and splitting all relevant steps in individual files, the code created to train the model serves as example for future students.
+
+* Factors
+- All data used to train, validate and test the model consists of image files of german traffic signs. Hence, they may contain signs that only exist in Germany or signs that have different symbols in other countries.
+
+* Metrics
+- The evaluation metric used in this project is the Accuracy.
+
+
+  | Run                  | Accuracy |
+  | Train [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/runs/31vb53ox/overview][polar-wave-143]] |   0.9993 |
+  | Test [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/runs/10d8vuzy/overview][fiery-frost-305]] |   0.9097 |
+
+* Evaluation Data
+- The dataset used in this project consists of images from German traffic signs.
+- It has 43 different traffic signs.
+- The target feature is the sign ID assigned to each type of sign.
+- The dataset is imbalanced with some signs having a lot less images than others.
+- The dataset can be downloaded from [[https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign][Kaggle]].
+- The dataset contains over 50k images.
+- Due to computational constraints (free version of Google Colab), we only used 30% (about 15k images) of the complete dataset to train, validate and test.
+- The dataset downloaded from Kaggle is already segregated in train and test sets with about 80% of the images for training and 20% for testing.
+- The test set can be found in our Weights & Biases project [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/][artifact]] as [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/test.h5/v2][Test]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/test_labels.csv/v1][Test Labels]].
+
+* Training Data
+- In the train step, another segregation was done. This time, 90% of the train set was used for training and the other 10% for validating the trained model, that is, for hyperparameter tuning.
+- The train set can be found in our Weights & Biases project [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/][artifact]] as [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/train.h5/v0][Train]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/train_labels.csv/v0][Train Labels]].
+
+* Quantitative Analysis
+- A W&B sweep was executed, trying different combinations for the architecture and configuration of the LeNet-5 Neural Network. Overall, there were over 15k possible configurations to test. We tested 100 of those at random. The [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/sweeps/ftpjniuf/overview][sweep]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/runs/9a76ir5b/overview][best configuration]] can be found in our W&B [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition][project]].
+
+* Ethical Considerations
+- The traffic sign images are from Germany, therefore they do not represent all traffic signs in the world. Also, since it only contains 43 different signs, the dataset also does not represent all traffic signs in Germany. Therefore this trained model should not be regarded as an app to determine all traffic signs in Germany let alone in the world.
+
+* Caveats and Recommendations
+- The dataset was used to create a Neural Network Classifier model with the sole intention of serving as an educational tool.
+- The dataset does not necessarily capture signs from other parts of the world.
+- Important issues related to dataset imbalance exist and should be properly treated with adequate techniques.
+
