@@ -4,7 +4,7 @@
 #+EMAIL: joao.farias.080@ufrn.edu.br
 
 * Model Details
-- João Lucas Farias and Júlio Freire are the authors of this model.
+- [[https://github.com/jotafarias13][João Lucas Farias]] and [[https://github.com/juliofreire][Júlio Freire]] are the authors of this model.
 - The dataset was taken from Kaggle and it contains images of German traffic signs.
 - A full pipeline was developed using Google Colab and Weights & Biases.
 - A LeNet-5 Neural Network was used to train the model.
@@ -39,7 +39,7 @@
 - The train set can be found in our Weights & Biases project [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/][artifact]] as [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/train.h5/v0][Train]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/artifacts/segregated_data/train_labels.csv/v0][Train Labels]].
 
 * Quantitative Analysis
-- A W&B sweep was executed, trying different combinations for the architecture and configuration of the LeNet-5 Neural Network. Overall, there were over 15k possible configurations to test. We tested 100 of those at random. The [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/sweeps/ftpjniuf/overview][sweep]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/runs/9a76ir5b/overview][best configuration]] can be found in our W&B [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition][project]].
+- A W&B sweep was executed trying different combinations for the architecture and configuration of the LeNet-5 Neural Network. Overall, there were over 15k possible configurations to test. We tested 100 of those at random. The [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/sweeps/ftpjniuf/overview][sweep]] and [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition/runs/9a76ir5b/overview][best configuration]] can be found in our W&B [[https://wandb.ai/ppgeec-ml-jj/traffic_sign_recognition][project]].
 
 * Ethical Considerations
 - The traffic sign images are from Germany, therefore they do not represent all traffic signs in the world. Also, since it only contains 43 different signs, the dataset also does not represent all traffic signs in Germany. Therefore this trained model should not be regarded as an app to determine all traffic signs in Germany let alone in the world.
