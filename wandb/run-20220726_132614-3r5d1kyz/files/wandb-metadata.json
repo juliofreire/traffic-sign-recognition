@@ -1,0 +1,25 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-07-26T16:26:33.909521",
+    "startedAt": "2022-07-26T16:26:14.059960",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "source.api.main:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "D:\\anaconda3\\envs\\colab2deploy\\Scripts\\uvicorn-script.py",
+    "codePath": "..\\..\\anaconda3\\envs\\colab2deploy\\Scripts\\uvicorn-script.py",
+    "git": {
+        "remote": "https://github.com/juliofreire/traffic-sign-recognition",
+        "commit": "09b3e336d3be66c429dd28f05e0d343d75fa1223"
+    },
+    "email": "julio.juliofreire@gmail.com",
+    "root": "D:/traffic-sign-cnn/traffic-sign-recognition",
+    "host": "ACERTMAIS-RN-51",
+    "username": "Julio.Freire",
+    "executable": "D:\\anaconda3\\envs\\colab2deploy\\python.exe"
+}
